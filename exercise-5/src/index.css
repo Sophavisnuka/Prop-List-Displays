@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;;
+}
+body {
+    background-color: rgb(178, 219, 255);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+}
+header {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.product-card {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4,1fr);
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    gap: 20px;
+}
+.product .card {
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+}
+.card img {
+    width: 200px;
+    transition: 0.3s;
+}
+.card img:hover {
+    transform: scale(1.05);
+}
+@media screen and (max-width: 1218px) {
+    .product {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media screen and (max-width: 660px) {
+    .product {
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
